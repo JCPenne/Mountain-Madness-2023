@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Hearts from '../Hearts';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
 import Questions from '../Questions/Questions';
+import Audio from "../../Audio/3min-taylor-swift-all-too-well.mp3";
 
 function Game() {
   const [lives, setLives] = React.useState([1, 2, 3]);
@@ -25,6 +26,8 @@ function Game() {
   }
   return (
     <div>
+      
+      <audio src={Audio} autoplay loop controls></audio>
       <p>Countdown Timer</p>
       <p>Ghost</p>
       <Questions stage={stage}></Questions>

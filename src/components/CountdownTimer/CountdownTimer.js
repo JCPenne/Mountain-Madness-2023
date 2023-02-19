@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 
 function CountdownTimer({ handleTimeout, timer, setTimer }) {
-  
-
   useEffect(() => {
     setTimeout(() => {
       if (timer > 0) {

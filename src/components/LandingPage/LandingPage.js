@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 function LandingPage() {
   const navigate = useNavigate();
   return (
-    
     <div>
       <div className='fade-in-and-fade-out'>Game description:
       This is a modified word scrambling game. The objective is to rearrange the jumbled words before the time runs out.
@@ -18,7 +17,12 @@ function LandingPage() {
       A ghost appears and shouts at rabbit. Now, you must translate these words to continue your journey to safety.</div>
       <div className="container"> </div>
       {/* If storyline has finished telling, then show the instruction paragraph and button */}
-      <button className='Button' onClick={() => navigate('/game')}>Start</button>
+      <button
+        className='Button'
+        onClick={() => navigate('/game')}
+      >
+        Start
+      </button>
     </div>
   );
 }

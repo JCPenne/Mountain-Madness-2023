@@ -2,6 +2,17 @@
   color: red;
 }
 
+.blurb {
+  font-family: Monaco, fantasy;
+  color: #5e17a9;
+}
+
+.landing-page-div {
+  font-family: Monaco, fantasy;
+  color: #5e17a9;
+  
+} 
+
 .container {
   display: flex;
   justify-content: center;
@@ -13,10 +24,11 @@
 .Button {
   padding: 12px 24px;
   border-radius: 4px;
-  background-color: #007bff;
+  background-color: #792784;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+  font-family: "trebuchet ms";
   text-align: center;
   display: flex;
   position: absolute;
@@ -42,7 +54,6 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
   text-transform: uppercase;
-}
 
 .homeBackground {
   width: 100vw;

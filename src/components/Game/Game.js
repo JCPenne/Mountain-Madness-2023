@@ -4,14 +4,10 @@ import { useNavigate } from 'react-router-dom';
 //Import components
 import Hearts from '../Hearts';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
-<<<<<<< HEAD
-import Questions from '../Questions/Questions';
 import Audio from "../../Audio/3min-taylor-swift-all-too-well.mp3";
-=======
 import Input from '../Input';
 //Import Data
 import { QuestionData } from '../../constants';
->>>>>>> e62a32bae13bb6811957982789027dcb350a4d49
 
 function Game() {
   const [lives, setLives] = React.useState([1, 2, 3]);

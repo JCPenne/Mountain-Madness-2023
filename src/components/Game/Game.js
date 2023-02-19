@@ -4,13 +4,14 @@ import { useNavigate } from 'react-router-dom';
 //Import components
 import Hearts from '../Hearts';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
-import Questions from '../Questions/Questions';
+import Input from '../Input';
+//Import Data
+import { QuestionData } from '../../constants';
 
 function Game() {
   const [lives, setLives] = React.useState([1, 2, 3]);
   const [timer, setTimer] = React.useState(15);
   const [stage, setStage] = React.useState(0);
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,24 +24,29 @@ function Game() {
     setLives(lives.slice(0, -1));
     setTimer(15);
   }
+
   return (
     <div>
-      <p>Countdown Timer</p>
       <p>Ghost</p>
-      <Questions stage={stage}></Questions>
-      {lives.map(e => (
-        <Hearts></Hearts>
+      <div>{QuestionData[stage].Question}</div>
+      {lives.map(index => (
+        <Hearts key={index}></Hearts>
       ))}
+      {/* Position the Rabbit in one of 5 positions, these can be a prop that is related to stage */}
       <p>Rabbit</p>
-      <p>Guess Box</p>
       <button onClick={() => setLives(lives.slice(0, -1))}>
         Lose a Life
       </button>
-      <CountdownTimer
+      {/* <CountdownTimer
         handleTimeout={handleTimeout}
         timer={timer}
         setTimer={setTimer}
-      ></CountdownTimer>
+      ></CountdownTimer> */}
+      <Input
+        stage={stage}
+        setStage={setStage}
+        question={QuestionData[stage]}
+      ></Input>
     </div>
   );
 }

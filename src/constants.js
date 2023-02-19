@@ -1,5 +1,10 @@
 export const QuestionData = [
-  {question: 'Question 1', answer: 'Answer 1'},
-  {question: 'Question 1', answer: 'Answer 1'},
-  {question: 'Question 1', answer: 'Answer 1'}
-]
+  { Question: "True love doesn't exist", Answer: 'true' },
+  { Question: 'Remove your fake friends', Answer: 'friends' },
+  { Question: 'stick to the right side', Answer: 'stick' },
+  { Question: " Let's leave together", Answer: 'together' },
+  {
+    Question: 'Forever stay truthful to yourself',
+    Answer: 'forever',
+  },
+];
